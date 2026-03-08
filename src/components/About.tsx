@@ -27,9 +27,9 @@ const About = () => {
               <div className="relative">
                 <div className="aspect-square w-full max-w-[320px] mx-auto rounded-3xl overflow-hidden shadow-xl border-8 border-white dark:border-slate-900">
                   <img 
-                    src="/crc/photos/123.jpg" 
+                    src="./public/images/123.JPG" 
                     alt="Otabek Abdullayev"
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                    className="object-cover hover:grayscale-0 transition-all duration-700"
                     referrerPolicy="no-referrer"
                   />
                 </div>
