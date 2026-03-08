@@ -26,7 +26,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     title: "Yumshoq Ko'nikmalar",
-    skills: ["O`rganuvchanlik qobiliyati", "Mustahkam bilim", "Muammolarni Hal Qilish"]
+    skills: ["O`rganuvchanlik qobiliyati", "Mustahkam bilim", "Muammolarni Hal Qilish", "AI bilan ishlash"]
   }
 ];
 
@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
     description: "Bu loyixa FaceId orqali ishlaydigan crm panel xisoblanib katta korxonalarda hisob kitob yuritish va ishchilarning o`z vaqtida ishga kelib ketishini nazorat qilish uchun hizmat qiladi. Bunda qoshimcha korxona raxbari o`zi uchun telegram botdan ishchilarning kelib ketish oylik haftalik kunlik malumotlarini olishi mumkin",
     techStack: ["Node.js", "NestJS", "React","Auth", "FaceID", "TypeScript"],
     githubUrl: "https://github.com/XN7Liders",
-    imageUrl: "https://images.unsplash.com/photo-1551288049-bbdac8626ad1?q=80&w=1000&auto=format&fit=crop"
+    imageUrl: "./images/crmpanel.jpg"
   },
   {
     id: "2",
@@ -54,7 +54,7 @@ export const PROJECTS: Project[] = [
     description: "Bu loyixada men telefon marketi uchun backend crm panelini yasaganman bunda NestJS, PostgreSQL, MongoDB ishlatilgan.",
     techStack: ["NestJS",  "PostgreSQL",  "MongoDB" ],
     githubUrl: "https://github.com/otabek0311/Phone_Market_Backend",
-    imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop"
+    imageUrl: "./images/crmauto.png"
   }
 ];
 
