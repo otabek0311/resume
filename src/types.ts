@@ -16,6 +16,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   imageUrl: string;
+  objectFit?: 'cover' | 'contain';
 }
 
 export interface Experience {

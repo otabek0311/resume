@@ -37,24 +37,28 @@ export const PROJECTS: Project[] = [
     title: "TimePlus",
     description: "Bu loyixa FaceId orqali ishlaydigan crm panel xisoblanib katta korxonalarda hisob kitob yuritish va ishchilarning o`z vaqtida ishga kelib ketishini nazorat qilish uchun hizmat qiladi. Bunda qoshimcha korxona raxbari o`zi uchun telegram botdan ishchilarning kelib ketish oylik haftalik kunlik malumotlarini olishi mumkin",
     techStack: ["Node.js", "NestJS", "React","Auth", "FaceID", "TypeScript"],
-    githubUrl: "https://github.com/XN7Liders",
-    imageUrl: "./images/crmpanel.jpg"
+    githubUrl: "https://timeplus.uz/",
+    imageUrl: "./images/crmpanel.jpg",
+    objectFit: "contain"
   },
+ 
   {
     id: "2",
-    title: "AuthGuard Pro",
-    description: "Ko'p faktorli autentifikatsiyani qo'llab-quvvatlaydigan keng qamrovli OAuth2 va OpenID Connect provayderi implementatsiyasi.",
-    techStack: ["TypeScript", "Fastify", "Redis", "PostgreSQL", "Argon2"],
-    githubUrl: "https://github.com/otabek0311/authguard-pro",
-    imageUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop"
+    title: "Phone Market CRM",
+    description: "Telefon savdosi uchun mo‘ljallangn azamonaviy backend CRM tizimi. NestJS asosida ishlab chiqilgan bo‘lib, yuqori samaradorlik va xavfsizlikni ta’minlaydi.Mahsulotlar, buyurtmalar va foydalanuvchilarni markazlashtirilgan boshqarish imkonini beradi. PostgreSQL va MongoDB orqali moslashuvchan ma’lumotlar ishlovi yo‘lga qo‘yilgan.Modulyar arxitektura real biznes jarayonlarini avtomatlashtirish va tizimni oson kengaytirishni qo‘llab-quvvatlaydi.",
+    techStack: ["NestJS",  "PostgreSQL",  "MongoDB" ],
+    githubUrl: "https://phonemarket.otabekbackend.uz/api",
+    imageUrl: "./images/Marketphones-Logo-Vector.svg-.png",
+    objectFit: "contain"
   },
   {
     id: "3",
-    title: "Phone Market CRM",
-    description: "Bu loyixada men telefon marketi uchun backend crm panelini yasaganman bunda NestJS, PostgreSQL, MongoDB ishlatilgan.",
-    techStack: ["NestJS",  "PostgreSQL",  "MongoDB" ],
-    githubUrl: "https://github.com/otabek0311/Phone_Market_Backend",
-    imageUrl: "./images/crmauto.png"
+    title: "UzAutoMotors",
+    description: "O'zbekiston avtomobil bozori uchun zamonaviy to'liq funksional veb-platforma. React va Node.js asosida qurilgan bo'lib, foydalanuvchilar avtomobillarni ko'rish, qidirish va filtrlash imkoniyatiga ega. Admin panel orqali markalar va avtomobillarni boshqarish, rasm yuklash va statistika ko'rish mumkin. Email orqali OTP tasdiqlash tizimi va JWT autentifikatsiya joriy etilgan.",
+    techStack: ["Express","MongoDB","BCRYPTJS","multer","nodemailer","react" ],
+    githubUrl: "https://uzautomotors.otabekbackend.uz/",
+    imageUrl: "./images/crmauto.png",
+    objectFit: "contain"
   }
 ];
 

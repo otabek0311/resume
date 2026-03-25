@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Github, ExternalLink, ArrowRight } from 'lucide-react';
+import { Globe, ExternalLink, ArrowRight } from 'lucide-react';
 import { PROJECTS } from '../constants';
 
 const Projects = () => {
@@ -53,10 +53,10 @@ const Projects = () => {
               {/* Project Image Container */}
               <div className="w-full md:w-3/5 group">
                 <div className="relative aspect-[16/10] overflow-hidden rounded-sm bg-slate-100 dark:bg-slate-900">
-                  <img 
-                    src={project.imageUrl} 
+                  <img
+                    src={project.imageUrl}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out opacity-90 group-hover:opacity-100"
+                    className={`w-full h-full ${project.objectFit === 'contain' ? 'object-contain p-8' : 'object-cover'} group-hover:scale-105 group-hover:grayscale-0 transition-all duration-1000 ease-out opacity-90 group-hover:opacity-100`}
                     referrerPolicy="no-referrer"
                   />
                   {/* Subtle Overlay */}
@@ -96,9 +96,9 @@ const Projects = () => {
                     className="inline-flex items-center gap-4 group/link"
                   >
                     <div className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center group-hover/link:bg-slate-900 dark:group-hover/link:bg-white group-hover/link:text-white dark:group-hover/link:text-slate-900 transition-all duration-300">
-                      <Github size={20} />
+                      <Globe size={20} />
                     </div>
-                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-900 dark:text-white">Kodni ko'rish</span>
+                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-900 dark:text-white">LOYIXANI KO`RISH</span>
                   </a>
                 </div>
               </div>
