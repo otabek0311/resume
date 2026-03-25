@@ -3,8 +3,8 @@ import { SkillCategory, Project, Experience, Education, ContactInfo } from './ty
 export const PERSONAL_INFO = {
   name: "Otabek Abdullayev",
   title: "Backend Dasturchi",
-  summary: "Toza kod, masshtablilik va xavfsizlikka e'tibor qaratgan holda yuqori unumdorlikka ega tizimlarni loyihalashtiraman. Node.js ekotizimi va zamonaviy backend arxitekturalari bo'yicha mutaxassisman.",
-  about: "Backend muhandisligi sohasida mutaxassisman, NestJS va Node.js yordamida mustahkam RESTful va GraphQL API-larni yaratishga ixtisoslashganman. Mening yondashuvim SOLID tamoyillari va Domain-Driven Design (DDD) ga asoslangan bo'lib, tizimlarning nafaqat ishlashini, balki ularni saqlash va kengaytirish osonligini ta'minlaydi. Men PostgreSQL optimallashtirish, mikroxizmatlar orkestratsiyasi va xavfsiz autentifikatsiya/avtorizatsiya oqimlarini amalga oshirish bo'yicha bilimga egaman.",
+  summary: "Backend dasturchi sifatida Node.js texnologiyalari bilan ishlayman. Amaliy loyihalarda barqaror va tushunarli backend tizimlarini yaratishga e’tibor qarataman.",
+  about: "Backend dasturlash yo‘nalishida ishlayman va Node.js hamda NestJS yordamida API lar ishlab chiqish tajribasiga egaman. RESTful va GraphQL yondashuvlari bilan ishlaganman. Kodni tartibli yozish va uni keyinchalik qo‘llab-quvvatlash oson bo‘lishiga e’tibor beraman. PostgreSQL bilan ishlash, oddiy arxitektura yechimlarini qurish va autentifikatsiya jarayonlarini tashkil qilish bo‘yicha amaliy tajribam mavjud. Doimiy ravishda yangi texnologiyalarni o‘rganishga harakat qilaman.",
 };
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
