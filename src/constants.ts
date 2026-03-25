@@ -3,50 +3,52 @@ import { SkillCategory, Project, Experience, Education, ContactInfo } from './ty
 export const PERSONAL_INFO = {
   name: "Otabek Abdullayev",
   title: "Backend Dasturchi",
-  summary: "Backend dasturchi sifatida Node.js texnologiyalari bilan ishlayman. Amaliy loyihalarda barqaror va tushunarli backend tizimlarini yaratishga e’tibor qarataman.",
-  about: "Backend dasturlash yo‘nalishida ishlayman va Node.js hamda NestJS yordamida API lar ishlab chiqish tajribasiga egaman. RESTful va GraphQL yondashuvlari bilan ishlaganman. Kodni tartibli yozish va uni keyinchalik qo‘llab-quvvatlash oson bo‘lishiga e’tibor beraman. PostgreSQL bilan ishlash, oddiy arxitektura yechimlarini qurish va autentifikatsiya jarayonlarini tashkil qilish bo‘yicha amaliy tajribam mavjud. Doimiy ravishda yangi texnologiyalarni o‘rganishga harakat qilaman.",
+  summary: "Node.js asosida backend tizimlar ishlab chiqaman. Amaliy loyihalarda barqaror va tushunarli yechimlar yaratishga e’tibor qarataman.",
+  about: "Backend dasturlash yo‘nalishida ishlayman. Node.js va NestJS yordamida API lar ishlab chiqish tajribasiga egaman. RESTful va GraphQL bilan ishlaganman. Kodni sodda va qo‘llab-quvvatlash oson bo‘lishiga e’tibor beraman. PostgreSQL va MongoDB bilan ishlash, oddiy arxitektura yechimlari va autentifikatsiya jarayonlarini tashkil qilish bo‘yicha tajribam bor. Yangi texnologiyalarni o‘rganishga doim harakat qilaman.",
 };
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: "Dasturlash Tillari",
-    skills: ["TypeScript", "JavaScript (ES6+)", "SQL","MySQL"]
+    skills: ["TypeScript", "JavaScript (ES6+)", "SQL", "MySQL"]
   },
   {
     title: "Freymvorklar va Muhitlar",
     skills: ["Node.js", "NestJS", "Express.js"]
   },
   {
-    title: "Ma'lumotlar Bazasi va Kesh",
-    skills: ["PostgreSQL", "MongoDB", "Redis", "Prisma", "TypeORM"]
+    title: "Ma'lumotlar Bazasi",
+    skills: ["PostgreSQL", "MongoDB", "Redis"]
   },
   {
-    title: "DevOps va Asboblar",
-    skills: ["Docker", "AWS (EC2, S3, Lambda)", "CI/CD (GitHub Actions)"]
+    title: "ORM va Asboblar",
+    skills: ["Prisma", "TypeORM"]
+  },
+  {
+    title: "DevOps va Asosiy Vositalar",
+    skills: ["Docker", "AWS (EC2, S3)", "GitHub Actions"]
   },
   {
     title: "Yumshoq Ko'nikmalar",
-    skills: ["O`rganuvchanlik qobiliyati", "Mustahkam bilim", "Muammolarni Hal Qilish", "AI bilan ishlash"]
+    skills: ["Tez o‘rganish",  "Jamoada ishlash", "Mas’uliyat"]
   }
 ];
 
 export const PROJECTS: Project[] = [
-  
   {
     id: "1",
-    title: "TimePlus",
-    description: "Bu loyixa FaceId orqali ishlaydigan crm panel xisoblanib katta korxonalarda hisob kitob yuritish va ishchilarning o`z vaqtida ishga kelib ketishini nazorat qilish uchun hizmat qiladi. Bunda qoshimcha korxona raxbari o`zi uchun telegram botdan ishchilarning kelib ketish oylik haftalik kunlik malumotlarini olishi mumkin",
-    techStack: ["Node.js", "NestJS", "React","Auth", "FaceID", "TypeScript"],
+    title: "TimePlus erp",
+    description: "FaceID asosida ishlovchi CRM tizimi. Ishchilarning kelib-ketishini nazorat qilish va hisobotlarni yuritish uchun mo‘ljallangan. Telegram bot orqali kunlik va oylik ma’lumotlarni olish imkoniyati mavjud.",
+    techStack: ["Node.js", "NestJS", "React", "TypeScript"],
     githubUrl: "https://timeplus.uz/",
     imageUrl: "./images/crmpanel.jpg",
     objectFit: "contain"
   },
- 
   {
     id: "2",
     title: "Phone Market CRM",
-    description: "Telefon savdosi uchun mo‘ljallangn azamonaviy backend CRM tizimi. NestJS asosida ishlab chiqilgan bo‘lib, yuqori samaradorlik va xavfsizlikni ta’minlaydi.Mahsulotlar, buyurtmalar va foydalanuvchilarni markazlashtirilgan boshqarish imkonini beradi. PostgreSQL va MongoDB orqali moslashuvchan ma’lumotlar ishlovi yo‘lga qo‘yilgan.Modulyar arxitektura real biznes jarayonlarini avtomatlashtirish va tizimni oson kengaytirishni qo‘llab-quvvatlaydi.",
-    techStack: ["NestJS",  "PostgreSQL",  "MongoDB","typeorm","passport-jwt","bcryptjs" ],
+    description: "Telefon savdosi uchun backend CRM tizimi. Mahsulotlar, buyurtmalar va foydalanuvchilarni boshqarish imkonini beradi. NestJS asosida ishlab chiqilgan, PostgreSQL va MongoDB ishlatilgan.",
+    techStack: ["NestJS", "PostgreSQL", "MongoDB", "TypeORM", "JWT"],
     githubUrl: "https://phonemarket.otabekbackend.uz/api",
     imageUrl: "./images/Marketphones-Logo-Vector.svg-.png",
     objectFit: "contain"
@@ -54,8 +56,8 @@ export const PROJECTS: Project[] = [
   {
     id: "3",
     title: "UzAutoMotors",
-    description: "O'zbekiston avtomobil bozori uchun zamonaviy to'liq funksional veb-platforma. React va Node.js asosida qurilgan bo'lib, foydalanuvchilar avtomobillarni ko'rish, qidirish va filtrlash imkoniyatiga ega. Admin panel orqali markalar va avtomobillarni boshqarish, rasm yuklash va statistika ko'rish mumkin. Email orqali OTP tasdiqlash tizimi va JWT autentifikatsiya joriy etilgan.",
-    techStack: ["Express","MongoDB","BCRYPTJS","multer","nodemailer","react" ],
+    description: "Avtomobillarni ko‘rish va boshqarish uchun web platforma. Foydalanuvchilar qidiruv va filterdan foydalanishi mumkin. Admin panel orqali ma’lumotlar boshqariladi. JWT autentifikatsiya va email tasdiqlash mavjud.",
+    techStack: ["Node.js", "Express", "MongoDB", "React"],
     githubUrl: "https://uzautomotors.otabekbackend.uz/",
     imageUrl: "./images/crmauto.png",
     objectFit: "contain"
@@ -64,17 +66,17 @@ export const PROJECTS: Project[] = [
 
 export const EDUCATION: Education[] = [
   {
-    degree: "Backend (Node.js) Muhandisligi",
+    degree: "Backend (Node.js)",
     institution: "Najot Ta'lim",
     period: "2025 - 2026",
-    description: "Node.js ekotizimi, NestJS, PostgreSQL va Redis yordamida murakkab backend tizimlarini qurish. Tizim dizayni, xavfsizlik va masshtablanuvchanlik bo'yicha chuqur bilimlar.",
+    description: "Node.js, NestJS va ma’lumotlar bazalari bilan ishlash. API yaratish va backend asoslarini o‘rganish.",
     logoUrl: "https://api.logobank.uz/media/logos_png/Najot_Talim-01.png"
   },
   {
-    degree: "Frontend Dasturlash va Kompyuter Savodxonligi",
-    institution: "To'rtko'l tumani IT Markazi",
+    degree: "Frontend va Kompyuter Savodxonligi",
+    institution: "To'rtko'l IT Markazi",
     period: "2021 - 2022",
-    description: "Dasturlash asoslari, JavaScript (ES6+) va Frontend texnologiyalari bo'yicha intensiv ta'lim. Algoritmlar va muammolarni hal qilish ko'nikmalarini shakllantirish.",
+    description: "Dasturlash asoslari va JavaScript bo‘yicha boshlang‘ich bilimlar.",
     logoUrl: "https://api.logobank.uz/media/logos_png/IT_park-01.png"
   }
 ];

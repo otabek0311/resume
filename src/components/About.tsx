@@ -5,10 +5,10 @@ import { Terminal, Code2, Database, ShieldCheck } from 'lucide-react';
 
 const About = () => {
   const highlights = [
-    { icon: <Terminal size={20} />, text: "Node.js & NestJS Mutaxassisi" },
-    { icon: <Database size={20} />, text: "PostgreSQL & Redis Optimallashtirish" },
-    { icon: <ShieldCheck size={20} />, text: "Xavfsiz Auth & DDD Arxitekturasi" },
-    { icon: <Code2 size={20} />, text: "SOLID & Toza Kod Tamoyillari" },
+    { icon: <Terminal size={20} />, text: "Node.js va NestJS bilan ishlash" },
+    { icon: <Database size={20} />, text: "PostgreSQL va Redis bilan tajriba" },
+    { icon: <ShieldCheck size={20} />, text: "Autentifikatsiya va xavfsizlik asoslari" },
+    { icon: <Code2 size={20} />, text: "Toza kod va yaxshi amaliyotlar" },
   ];
 
   return (
@@ -16,7 +16,8 @@ const About = () => {
       <div className="container-width">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start">
-            {/* Image Column - Smaller and more refined */}
+            
+            {/* Image Column */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -33,7 +34,6 @@ const About = () => {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                {/* Subtle background element */}
                 <div className="absolute -bottom-4 -right-4 w-full h-full bg-primary-500/10 rounded-3xl -z-10"></div>
               </div>
               
@@ -52,19 +52,22 @@ const About = () => {
               className="w-full lg:w-2/3"
             >
               <div className="space-y-8">
+                
                 <div>
                   <h2 className="text-3xl md:text-5xl font-display text-slate-900 dark:text-white mb-6">
-                    Tizimlarni <span className="text-primary-600 italic">masshtablayman</span> va optimallashtiraman
+                    Backend tizimlar yaratish va <span className="text-primary-600 italic">takomillashtirish</span>
                   </h2>
+
                   <div className="space-y-4 text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
                     <p>{PERSONAL_INFO.about}</p>
+
                     <p>
-                      Mening maqsadim — nafaqat ishlaydigan, balki kelajakda kengaytirish oson bo'lgan, xavfsiz va yuqori unumdorlikka ega backend tizimlarini yaratishdir. Har bir loyihada arxitektura tozaligi va ma'lumotlar bazasi samaradorligiga alohida e'tibor qarataman.
+                      Mening maqsadim — sodda va tushunarli backend tizimlar yaratish. Har bir loyihada kodning tartibli bo‘lishi va tizimni keyinchalik rivojlantirish oson bo‘lishiga e’tibor beraman.
                     </p>
                   </div>
                 </div>
 
-                {/* Highlights Grid */}
+                {/* Highlights */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   {highlights.map((item, index) => (
                     <div 
@@ -81,13 +84,9 @@ const About = () => {
                   ))}
                 </div>
 
-                {/* Simple Stats */}
-                <div className="pt-6 flex gap-12 border-t border-slate-200 dark:border-slate-800">
-                  
-                 
-                </div>
               </div>
             </motion.div>
+
           </div>
         </div>
       </div>

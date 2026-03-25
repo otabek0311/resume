@@ -23,7 +23,7 @@ const Hero = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-pink-50 text-pink-600 rounded-full text-xs font-bold uppercase tracking-wider border border-pink-100">
               <span className="w-2 h-2 bg-pink-500 rounded-full animate-pulse"></span>
-              YANGI IMKONIYATLAR UCHUN OCHIQMAN
+              ISH IMKONIYATLARIGA OCHIQMAN
             </div>
 
             {/* Main Title */}
@@ -38,7 +38,7 @@ const Hero = () => {
 
             {/* Description */}
             <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
-              Toza kod, masshtablilik va xavfsizlikka e'tibor qaratgan holda yuqori unumdorlikka ega tizimlarni loyihalashtiraman. Node.js ekotizimi va zamonaviy backend arxitekturalari bo'yicha mutaxassisman.
+              Node.js asosida backend tizimlar ishlab chiqaman. Amaliy loyihalarda barqaror va tushunarli yechimlar yaratishga e’tibor qarataman.
             </p>
 
             {/* Actions */}
@@ -63,5 +63,6 @@ const Hero = () => {
     </section>
   );
 };
+
 
 export default Hero;
