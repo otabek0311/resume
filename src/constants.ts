@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
     id: "2",
     title: "Phone Market CRM",
     description: "Telefon savdosi uchun mo‘ljallangn azamonaviy backend CRM tizimi. NestJS asosida ishlab chiqilgan bo‘lib, yuqori samaradorlik va xavfsizlikni ta’minlaydi.Mahsulotlar, buyurtmalar va foydalanuvchilarni markazlashtirilgan boshqarish imkonini beradi. PostgreSQL va MongoDB orqali moslashuvchan ma’lumotlar ishlovi yo‘lga qo‘yilgan.Modulyar arxitektura real biznes jarayonlarini avtomatlashtirish va tizimni oson kengaytirishni qo‘llab-quvvatlaydi.",
-    techStack: ["NestJS",  "PostgreSQL",  "MongoDB" ],
+    techStack: ["NestJS",  "PostgreSQL",  "MongoDB","typeorm","passport-jwt","bcryptjs" ],
     githubUrl: "https://phonemarket.otabekbackend.uz/api",
     imageUrl: "./images/Marketphones-Logo-Vector.svg-.png",
     objectFit: "contain"
