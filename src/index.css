@@ -42,7 +42,7 @@
   }
   
   .container-width {
-    @apply max-w-7xl mx-auto px-6 md:px-12;
+    @apply max-w-[1280px] mx-auto px-6 md:px-12 lg:px-16 xl:px-20;
   }
 
   .btn-primary {

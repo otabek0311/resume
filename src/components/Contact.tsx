@@ -3,8 +3,10 @@ import { motion } from 'motion/react';
 import { Mail, Github, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { CONTACT_INFO } from '../constants';
+import { useLanguage } from '../context/LanguageContext';
 
 const Contact = () => {
+  const { t } = useLanguage();
   const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -41,7 +43,7 @@ const Contact = () => {
       setTimeout(() => setStatus('idle'), 5000);
     } catch (error: any) {
       console.error('EmailJS error:', error);
-      const msg = error?.text || error?.message || JSON.stringify(error) || "Noma'lum xatolik";
+      const msg = error?.text || error?.message || JSON.stringify(error) || 'Unknown error';
       setErrorMsg(msg);
       setStatus('error');
       setTimeout(() => { setStatus('idle'); setErrorMsg(''); }, 6000);
@@ -59,11 +61,10 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-display uppercase tracking-tighter text-slate-900 dark:text-white mb-6">
-            Aloqa
+            {t.contact.title}
           </h2>
           <p className="text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
-            Loyihangiz bormi yoki backend arxitekturasi haqida
-            suhbatlashmoqchimisiz? Men doim yangi g'oyalar uchun ochiqman.
+            {t.contact.subtitle}
           </p>
         </motion.div>
 
@@ -77,7 +78,7 @@ const Contact = () => {
             className="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-slate-100 dark:border-slate-800 shadow-sm"
           >
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-8">
-              Kontakt Ma'lumotlari
+              {t.contact.contactInfoTitle}
             </h3>
             <div className="space-y-6">
               <a href={`mailto:${CONTACT_INFO.email}`} className="flex items-center gap-4 group">
@@ -114,7 +115,7 @@ const Contact = () => {
               </a>
             </div>
             <div className="mt-10 pt-8 border-t border-slate-100 dark:border-slate-800">
-              <p className="text-sm text-slate-400 dark:text-slate-500">Shoshilinch masalalar bo'yicha Telegram orqali bog'lanishingiz mumkin.</p>
+              <p className="text-sm text-slate-400 dark:text-slate-500">{t.contact.urgentMsg}</p>
             </div>
           </motion.div>
 
@@ -129,20 +130,20 @@ const Contact = () => {
             <form ref={formRef} className="space-y-5">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Ism</label>
-                  <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Sizning ismingiz"
+                  <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">{t.contact.name}</label>
+                  <input type="text" name="name" value={form.name} onChange={handleChange} placeholder={t.contact.namePlaceholder}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all text-sm" />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Email</label>
-                  <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="email@manzilingiz.com"
+                  <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="email@example.com"
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all text-sm" />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Xabar</label>
-                <textarea name="message" value={form.message} onChange={handleChange} placeholder="Sizga qanday yordam bera olaman?" rows={6}
+                <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">{t.contact.message}</label>
+                <textarea name="message" value={form.message} onChange={handleChange} placeholder={t.contact.messagePlaceholder} rows={6}
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all text-sm resize-none" />
               </div>
 
@@ -150,7 +151,7 @@ const Contact = () => {
                 <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}
                   className="flex items-center gap-3 px-4 py-3 bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl">
                   <CheckCircle size={18} className="text-emerald-500 flex-shrink-0" />
-                  <p className="text-sm font-medium text-emerald-700 dark:text-emerald-400">Xabar muvaffaqiyatli yuborildi! Tez orada javob beraman.</p>
+                  <p className="text-sm font-medium text-emerald-700 dark:text-emerald-400">{t.contact.successMsg}</p>
                 </motion.div>
               )}
 
@@ -160,8 +161,8 @@ const Contact = () => {
                   <AlertCircle size={18} className="text-red-500 flex-shrink-0" />
                   <p className="text-sm font-medium text-red-700 dark:text-red-400">
                     {!form.name || !form.email || !form.message
-                      ? "Iltimos, barcha maydonlarni to'ldiring."
-                      : `Xatolik: ${errorMsg}`}
+                      ? t.contact.fillAll
+                      : `${t.contact.errorPrefix}: ${errorMsg}`}
                   </p>
                 </motion.div>
               )}
@@ -169,11 +170,11 @@ const Contact = () => {
               <button onClick={handleSubmit} disabled={status === 'loading' || status === 'success'}
                 className="w-full px-8 py-4 bg-pink-500 hover:bg-pink-600 disabled:opacity-60 disabled:cursor-not-allowed text-white rounded-2xl font-bold text-base transition-all shadow-lg shadow-pink-500/25 flex items-center justify-center gap-3 group">
                 {status === 'loading' ? (
-                  <><Loader2 size={20} className="animate-spin" /> Yuborilmoqda...</>
+                  <><Loader2 size={20} className="animate-spin" /> {t.contact.sending}</>
                 ) : status === 'success' ? (
-                  <><CheckCircle size={20} /> Yuborildi!</>
+                  <><CheckCircle size={20} /> {t.contact.sent}</>
                 ) : (
-                  <>Xabar yuborish <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /></>
+                  <>{t.contact.send} <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /></>
                 )}
               </button>
             </form>

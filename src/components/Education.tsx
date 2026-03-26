@@ -2,31 +2,34 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { GraduationCap } from 'lucide-react';
 import { EDUCATION } from '../constants';
+import { useLanguage } from '../context/LanguageContext';
 
 const Education = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="education" className="section-padding bg-white dark:bg-slate-900 relative overflow-hidden">
       <div className="container-width">
         <div className="text-center mb-20">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-7xl font-display uppercase text-slate-900 dark:text-white mb-6 tracking-tight"
+            className="text-4xl md:text-6xl xl:text-7xl font-display uppercase text-slate-900 dark:text-white mb-6 tracking-tight"
           >
-            Ta'lim
+            {t.education.title}
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             className="text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
           >
-            Mening talim olgan joylarim va qo`shilgan sertifikatlarim.
+            {t.education.subtitle}
           </motion.p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {EDUCATION.map((edu, idx) => (
             <motion.div
@@ -39,9 +42,9 @@ const Education = () => {
             >
               <div className="w-16 h-16 bg-primary-50 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400 rounded-2xl flex items-center justify-center mb-8">
                 {edu.logoUrl ? (
-                  <img 
-                    src={edu.logoUrl} 
-                    alt={edu.institution} 
+                  <img
+                    src={edu.logoUrl}
+                    alt={edu.institution}
                     className="w-10 h-10 object-contain filter dark:brightness-0 dark:invert"
                     referrerPolicy="no-referrer"
                   />
@@ -50,7 +53,7 @@ const Education = () => {
                 )}
               </div>
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">
-                {edu.degree}
+                {t.education.entries[idx]?.degree ?? edu.degree}
               </h3>
               <p className="text-primary-600 dark:text-primary-400 font-bold text-lg mb-3">
                 {edu.institution}
@@ -60,7 +63,7 @@ const Education = () => {
               </div>
               {edu.description && (
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base">
-                  {edu.description}
+                  {t.education.entries[idx]?.description ?? edu.description}
                 </p>
               )}
             </motion.div>

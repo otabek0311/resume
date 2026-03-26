@@ -2,8 +2,11 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
+import { useLanguage } from '../context/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-white dark:bg-slate-950">
       {/* Background Gradients */}
@@ -23,38 +26,38 @@ const Hero = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-pink-50 text-pink-600 rounded-full text-xs font-bold uppercase tracking-wider border border-pink-100">
               <span className="w-2 h-2 bg-pink-500 rounded-full animate-pulse"></span>
-              ISH IMKONIYATLARIGA OCHIQMAN
+              {t.hero.badge}
             </div>
 
             {/* Main Title */}
-            <h1 className="text-7xl md:text-[140px] font-display uppercase leading-[0.85] tracking-tighter text-slate-900 dark:text-white">
+            <h1 className="text-[clamp(3.5rem,9vw,8.75rem)] font-display uppercase leading-[0.85] tracking-tighter text-slate-900 dark:text-white">
               {PERSONAL_INFO.name}
             </h1>
 
             {/* Subtitle */}
-            <h2 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white">
-              Backend Dasturchi
+            <h2 className="text-3xl md:text-5xl xl:text-6xl font-bold text-slate-900 dark:text-white">
+              {t.hero.title}
             </h2>
 
             {/* Description */}
-            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
-              Node.js asosida backend tizimlar ishlab chiqaman. Amaliy loyihalarda barqaror va tushunarli yechimlar yaratishga e’tibor qarataman.
+            <p className="text-lg md:text-xl xl:text-2xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+              {t.hero.description}
             </p>
 
             {/* Actions */}
             <div className="flex flex-wrap gap-6 pt-4">
-              <a 
-                href="#projects" 
+              <a
+                href="#projects"
                 className="px-10 py-5 bg-pink-500 text-white rounded-2xl font-bold text-lg hover:bg-pink-600 transition-all shadow-xl shadow-pink-500/25 flex items-center gap-3 group"
               >
-                Loyihalarni ko'rish
+                {t.hero.viewProjects}
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 className="px-10 py-5 bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 rounded-2xl font-bold text-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all shadow-sm"
               >
-                Men bilan bog'lanish
+                {t.hero.contactMe}
               </a>
             </div>
           </motion.div>
@@ -63,6 +66,5 @@ const Hero = () => {
     </section>
   );
 };
-
 
 export default Hero;
